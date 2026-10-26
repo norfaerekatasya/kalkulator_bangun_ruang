@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Bangun Ruang</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kalkulator Bangun Ruang</h1>
+        <p>Hitung volume dan luas permukaan bangun ruang</p>
+
+        <label for="bangun">Pilih Bangun Ruang:</label>
+        <select id="bangun" onchange="tampilkanInput()">
+            <option value="kubus">Kubus</option>
+            <option value="balok">Balok</option>
+            <option value="tabung">Tabung</option>
+            <option value="kerucut">Kerucut</option>
+            <option value="bola">Bola</option>
+            <option value="prisma">Prisma Segitiga</option>
+            <option value="limas">Limas Segiempat</option>
+            <option value="limas3">Limas Segitiga</option>
+        </select>
+
+        <div id="inputUkuran"></div>
+
+        <button onclick="hitung()">Hitung</button>
+        <button class="reset" onclick="resetForm()">Reset</button>
+
+        <div id="hasil">
+            <h3>Hasil Perhitungan</h3>
+            <p>Hasil akan muncul di sini.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
