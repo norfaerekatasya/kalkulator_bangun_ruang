@@ -226,17 +226,14 @@ $(document).ready(function () {
         tampilkanInput();
     });
 
-    // Event jQuery: tombol hitung
     $("#btnHitung").on("click", function () {
         hitung(true);
     });
 
-    // Event jQuery: perubahan nilai input secara real-time
     $("#inputUkuran").on("input", "input", function () {
         hitung(false);
     });
 
-    // Event jQuery: tombol reset
     $("#btnReset").on("click", function () {
         $("#inputUkuran input").val("");
 
@@ -246,7 +243,12 @@ $(document).ready(function () {
         `).fadeIn(300);
     });
 
-    // Menampilkan input awal
+    $("#btnHitung, #btnReset").on("click", function () {
+        $(this).stop(true, true)
+            .animate({ opacity: 0.6 }, 100)
+            .animate({ opacity: 1 }, 200);
+    });
+
     tampilkanInput();
 
 });
