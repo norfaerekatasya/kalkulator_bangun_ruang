@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -8,33 +9,38 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Kalkulator Bangun Ruang</h1>
-        <p>Hitung volume dan luas permukaan bangun ruang</p>
+<div class="container">
+    <h1>Kalkulator Bangun Ruang</h1>
+    <p>Hitung volume dan luas permukaan bangun ruang</p>
 
-        <label for="bangun">Pilih Bangun Ruang:</label>
-        <select id="bangun" onchange="tampilkanInput()">
-            <option value="kubus">Kubus</option>
-            <option value="balok">Balok</option>
-            <option value="tabung">Tabung</option>
-            <option value="kerucut">Kerucut</option>
-            <option value="bola">Bola</option>
-            <option value="prisma">Prisma Segitiga</option>
-            <option value="limas">Limas Segiempat</option>
-            <option value="limas3">Limas Segitiga</option>
-        </select>
+    <label for="bangun">Pilih Bangun Ruang:</label>
+    <select id="bangun">
+        <option value="kubus">Kubus</option>
+        <option value="balok">Balok</option>
+        <option value="tabung">Tabung</option>
+        <option value="kerucut">Kerucut</option>
+        <option value="bola">Bola</option>
+        <option value="prisma">Prisma Segitiga</option>
+        <option value="limas">Limas Segiempat</option>
+        <option value="limas3">Limas Segitiga</option>
+    </select>
 
-        <div id="inputUkuran"></div>
+    <div id="inputUkuran"></div>
 
-        <button onclick="hitung()">Hitung</button>
-        <button class="reset" onclick="resetForm()">Reset</button>
+    <button type="button" id="btnHitung">Hitung</button>
+    <button type="button" id="btnReset" class="reset">Reset</button>
 
-        <div id="hasil">
-            <h3>Hasil Perhitungan</h3>
-            <p>Hasil akan muncul di sini.</p>
-        </div>
+    <div id="hasil" aria-live="polite">
+        <h3>Hasil Perhitungan</h3>
+        <p>Masukkan ukuran bangun ruang.</p>
     </div>
+</div>
 
-    <script src="script.js"></script>
+<!-- Library jQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- JavaScript aplikasi -->
+<script src="script.js"></script>
+
 </body>
 </html>
